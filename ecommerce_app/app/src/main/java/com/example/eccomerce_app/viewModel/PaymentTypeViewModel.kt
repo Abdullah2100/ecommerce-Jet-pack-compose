@@ -3,15 +3,15 @@ package com.example.eccomerce_app.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.repository.PaymentTypeRepository
-import com.example.core.network.dto.PaymentTypeDto
+import com.example.core.domain.repository.IPaymentTypeRepository
+import com.example.core.data.dto.PaymentTypeDto
 import com.example.eccomerce_app.model.DtoToModel.toPaymentType
 import com.example.common.model.PaymentType
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class PaymentTypeViewModel(private val paymentTypeRepository: PaymentTypeRepository): ViewModel() {
+class PaymentTypeViewModel(private val paymentTypeRepository: IPaymentTypeRepository): ViewModel() {
     private val _paymentTypes = MutableStateFlow<List<PaymentType>>(emptyList())
      val paymentTypes = _paymentTypes.asStateFlow()
 

@@ -5,12 +5,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.eccomerce_app.model.DtoToModel.toOrderItem
 import com.example.common.model.OrderItem
-import com.example.core.network.dto.OrderDto
-import com.example.core.network.dto.OrderItemDto
-import com.example.core.network.dto.OrderItemsStatusEvent
+import com.example.core.data.dto.OrderDto
+import com.example.core.data.dto.OrderItemDto
+import com.example.core.data.dto.OrderItemsStatusEvent
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.repository.OrderItemRepository
-import com.example.core.network.dto.OrderUpdateStatusDto
+import com.example.core.data.repository.OrderItemRepository
+import com.example.core.data.dto.OrderUpdateStatusDto
 import com.microsoft.signalr.HubConnection
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope

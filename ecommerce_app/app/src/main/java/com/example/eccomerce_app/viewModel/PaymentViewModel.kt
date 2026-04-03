@@ -2,10 +2,10 @@ package com.example.eccomerce_app.viewModel
 
 import androidx.lifecycle.ViewModel
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.repository.PaymentRepository
-import com.example.core.network.dto.StripeClientSecret
+import com.example.core.domain.repository.IPaymentRepository
+import com.example.core.data.dto.StripeClientSecret
 
-class PaymentViewModel(private val paymentRepository: PaymentRepository): ViewModel() {
+class PaymentViewModel(private val paymentRepository: IPaymentRepository): ViewModel() {
 
 
     suspend fun  submitOrderToStripe(totalPrice: Long):String?{

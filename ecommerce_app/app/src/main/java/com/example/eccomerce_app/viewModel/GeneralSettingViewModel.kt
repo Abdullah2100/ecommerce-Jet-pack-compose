@@ -5,9 +5,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.eccomerce_app.model.DtoToModel.toGeneralSetting
 import com.example.common.model.GeneralSetting
-import com.example.core.network.dto.GeneralSettingDto
+import com.example.core.data.dto.GeneralSettingDto
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.repository.GeneralSettingRepository
+import com.example.core.data.repository.GeneralSettingRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch

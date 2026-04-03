@@ -2,11 +2,11 @@ package com.example.eccomerce_app.viewModel
 
 import android.util.Log
 import com.example.eccomerce_app.util.GeneralValue
-import com.example.core.network.repository.AuthRepository
+import com.example.core.data.repository.AuthRepository
 import com.example.core.database.Dao.AuthDao
 import com.example.core.database.Dao.LocaleDao
-import com.example.core.network.dto.AuthDto
-import com.example.core.network.dto.SignupDto
+import com.example.core.data.dto.AuthDto
+import com.example.core.data.dto.SignupDto
 import com.example.core.network.NetworkCallHandler
 import io.mockk.coEvery
 import io.mockk.coVerify

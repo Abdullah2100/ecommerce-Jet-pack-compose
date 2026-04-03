@@ -6,8 +6,8 @@ import androidx.lifecycle.viewModelScope
 import com.example.common.model.Delivery
 import com.example.eccomerce_app.model.DtoToModel.toDeliveryInfo
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.repository.DeliveryRepository
-import com.example.core.network.dto.DeliveryDto
+import com.example.core.domain.repository.IDeliveryRepository
+import com.example.core.data.dto.DeliveryDto
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import java.util.UUID
@@ -15,7 +15,7 @@ import java.util.UUID
 
 
 class DeliveryViewModel(
-    private val deliveryRepository: DeliveryRepository,
+    private val deliveryRepository: IDeliveryRepository,
 ) : ViewModel() {
 
     val deliveries = MutableStateFlow<List<Delivery>?>(null)

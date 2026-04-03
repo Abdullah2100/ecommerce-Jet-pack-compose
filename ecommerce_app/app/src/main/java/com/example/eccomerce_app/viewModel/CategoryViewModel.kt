@@ -3,14 +3,13 @@ package com.example.eccomerce_app.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.common.model.Category
-import com.example.core.network.dto.CategoryDto
+import com.example.core.data.dto.CategoryDto
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.repository.CategoryRepository
+import com.example.core.data.repository.CategoryRepository
 import com.example.eccomerce_app.model.DtoToModel.toCategory
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import java.util.UUID
 
 class CategoryViewModel(val categoryRepository: CategoryRepository) : ViewModel() {
     private val _categories = MutableStateFlow<MutableList<Category>?>(null)

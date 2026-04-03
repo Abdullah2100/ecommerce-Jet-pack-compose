@@ -5,12 +5,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.common.model.ProductModel
 import com.example.common.model.ProductVariantSelection
-import com.example.core.network.dto.ProductDto
+import com.example.core.data.dto.ProductDto
 import com.example.eccomerce_app.model.DtoToModel.toProduct
 import com.example.core.database.Dao.CurrencyDao
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.Secrets
-import com.example.core.network.repository.ProductRepository
+import com.example.core.domain.Secrets
+import com.example.core.data.repository.ProductRepository
 import com.example.eccomerce_app.util.General.convertPriceToAnotherCurrency
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

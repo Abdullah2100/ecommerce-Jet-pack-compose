@@ -5,16 +5,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.common.model.VariantModel
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.dto.VariantDto
+import com.example.core.data.dto.VariantDto
 import com.example.eccomerce_app.model.DtoToModel.toVariant
-import com.example.core.network.repository.VariantRepository
+import com.example.core.domain.repository.IVariantRepository
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 
-class VariantViewModel(val variantRepository: VariantRepository) : ViewModel() {
+class VariantViewModel(val variantRepository: IVariantRepository) : ViewModel() {
 
 
   private   val _variants = MutableStateFlow<MutableList<VariantModel>?>(null)

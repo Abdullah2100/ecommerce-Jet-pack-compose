@@ -1,7 +1,6 @@
 package com.example.eccomerce_app.di
 
-import com.example.core.di.provideHttpClient
-import com.example.core.network.Secrets
+import com.example.core.domain.Secrets
 import com.microsoft.signalr.HubConnection
 import com.microsoft.signalr.HubConnectionBuilder
 import com.microsoft.signalr.TransportEnum

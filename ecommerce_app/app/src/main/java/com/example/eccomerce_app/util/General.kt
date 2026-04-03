@@ -16,7 +16,6 @@ import coil.decode.SvgDecoder
 import coil.request.ImageRequest
 import com.example.e_commercompose.R
 import com.example.core.database.Model.Currency
-import com.example.core.network.Secrets
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.number

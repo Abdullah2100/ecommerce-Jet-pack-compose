@@ -35,7 +35,7 @@ import com.example.eccomerce_app.ui.Screens
 import com.example.eccomerce_app.ui.component.PaymentTypeShape
 import com.example.eccomerce_app.ui.component.SharedAppBar
 import com.example.eccomerce_app.util.General
-import com.example.core.network.Secrets
+import com.example.core.domain.Secrets
 import com.stripe.android.PaymentConfiguration
 import com.stripe.android.paymentsheet.PaymentSheet
 import kotlinx.coroutines.*

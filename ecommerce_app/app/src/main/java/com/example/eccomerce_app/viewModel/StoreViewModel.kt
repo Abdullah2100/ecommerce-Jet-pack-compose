@@ -3,14 +3,14 @@ package com.example.eccomerce_app.viewModel
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.core.network.dto.StoreDto
+import com.example.core.data.dto.StoreDto
 import com.example.eccomerce_app.model.DtoToModel.toStore
 import com.example.common.model.StoreModel
-import com.example.core.network.dto.CreateStoreDto
-import com.example.core.network.dto.StoreStatusDto
+import com.example.core.data.dto.CreateStoreDto
+import com.example.core.data.dto.StoreStatusDto
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.Secrets
-import com.example.core.network.repository.StoreRepository
+import com.example.core.domain.Secrets
+import com.example.core.domain.repository.IStoreRepository
 import com.microsoft.signalr.HubConnection
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
@@ -25,7 +25,7 @@ import kotlin.collections.toList
 
 
 class StoreViewModel(
-    val storeRepository: StoreRepository,
+    val storeRepository: IStoreRepository,
     @Named("storeHub") val webSocket: HubConnection?,
     val coroutineScop: CoroutineScope
 ) : ViewModel() {

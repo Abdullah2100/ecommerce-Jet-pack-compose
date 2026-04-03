@@ -4,9 +4,9 @@ import com.example.common.model.CardProductModel
 import com.example.common.model.ProductVariant
 import com.example.common.model.ProductVariantSelection
 import com.example.common.model.SubCategoryUpdate
-import com.example.core.network.dto.CreateOrderItemDto
-import com.example.core.network.dto.CreateProductVariantDto
-import com.example.core.network.dto.UpdateSubCategoryDto
+import com.example.core.data.dto.CreateOrderItemDto
+import com.example.core.data.dto.CreateProductVariantDto
+import com.example.core.data.dto.UpdateSubCategoryDto
 
 object ModelToDto {
 

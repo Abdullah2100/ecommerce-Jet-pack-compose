@@ -17,24 +17,25 @@ import com.example.common.model.StoreModel
 import com.example.common.model.SubCategory
 import com.example.common.model.UserModel
 import com.example.common.model.VariantModel
-import com.example.core.network.dto.AddressDto
-import com.example.core.network.dto.DeliveryDto
-import com.example.core.network.dto.OrderItemDto
-import com.example.core.network.dto.OrderProductDto
-import com.example.core.network.dto.OrderVariantDto
-import com.example.core.network.dto.UserDto
-import com.example.core.network.dto.VariantDto
+import com.example.core.domain.Secrets
+import com.example.core.data.dto.AddressDto
+import com.example.core.data.dto.DeliveryDto
+import com.example.core.data.dto.OrderItemDto
+import com.example.core.data.dto.OrderProductDto
+import com.example.core.data.dto.OrderVariantDto
+import com.example.core.data.dto.UserDto
+import com.example.core.data.dto.VariantDto
 import com.example.core.network.*
-import com.example.core.network.dto.BannerDto
-import com.example.core.network.dto.CategoryDto
-import com.example.core.network.dto.DeliveryUserInfoDto
-import com.example.core.network.dto.GeneralSettingDto
-import com.example.core.network.dto.OrderDto
-import com.example.core.network.dto.PaymentTypeDto
-import com.example.core.network.dto.ProductDto
-import com.example.core.network.dto.ProductVariantDto
-import com.example.core.network.dto.StoreDto
-import com.example.core.network.dto.SubCategoryDto
+import com.example.core.data.dto.BannerDto
+import com.example.core.data.dto.CategoryDto
+import com.example.core.data.dto.DeliveryUserInfoDto
+import com.example.core.data.dto.GeneralSettingDto
+import com.example.core.data.dto.OrderDto
+import com.example.core.data.dto.PaymentTypeDto
+import com.example.core.data.dto.ProductDto
+import com.example.core.data.dto.ProductVariantDto
+import com.example.core.data.dto.StoreDto
+import com.example.core.data.dto.SubCategoryDto
 import kotlin.text.replace
 
 object DtoToModel {
@@ -186,7 +187,7 @@ object DtoToModel {
         return OrderProduct(
             id = this.id,
             name = this.name,
-            thmbnail = if (this.thmbnail != null && this.thmbnail!!.isNotEmpty()) this.thmbnail!!.replace(
+            thmbnail = if (this.thumbnail != null && this.thumbnail!!.isNotEmpty()) this.thumbnail!!.replace(
                 "localhost",
                 Secrets.imageUrl
             ) else "",

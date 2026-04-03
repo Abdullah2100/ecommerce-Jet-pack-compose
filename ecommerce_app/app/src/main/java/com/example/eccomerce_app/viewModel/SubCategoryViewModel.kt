@@ -5,13 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.common.model.SubCategory
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.dto.SubCategoryDto
+import com.example.core.data.dto.SubCategoryDto
 import com.example.eccomerce_app.model.DtoToModel.toSubCategory
 import com.example.common.model.ModelToDto.toSubCategoryUpdateDto
 import com.example.common.model.SubCategoryUpdate
-import com.example.core.network.Secrets
-import com.example.core.network.dto.CreateSubCategoryDto
-import com.example.core.network.repository.SubCategoryRepository
+import com.example.core.domain.Secrets
+import com.example.core.data.dto.CreateSubCategoryDto
+import com.example.core.domain.repository.ISubCategoryRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
@@ -19,7 +19,7 @@ import kotlinx.coroutines.launch
 import java.util.UUID
 
 
-class SubCategoryViewModel(val subCategoryRepository: SubCategoryRepository) : ViewModel() {
+class SubCategoryViewModel(val subCategoryRepository: ISubCategoryRepository) : ViewModel() {
 
    private  val _SubCategories = MutableStateFlow<List<SubCategory>?>(null)
     val subCategories = _SubCategories.asStateFlow()

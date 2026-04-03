@@ -2,8 +2,8 @@ package com.example.eccomerce_app.viewModel
 
 import androidx.lifecycle.ViewModel
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.repository.MapRepository
-import com.example.core.network.dto.GooglePlacesInfo
+import com.example.core.domain.repository.IMapRepository
+import com.example.core.data.dto.GooglePlacesInfo
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.PolyUtil
 import kotlinx.coroutines.Dispatchers
@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.withContext
 
-class MapViewModel(private val mapRepository: MapRepository) : ViewModel() {
+class MapViewModel(private val mapRepository: IMapRepository) : ViewModel() {
 
     private val _googlePlaceInfo = MutableStateFlow<List<LatLng>?>(null)
     val googlePlaceInfo = _googlePlaceInfo.asStateFlow()

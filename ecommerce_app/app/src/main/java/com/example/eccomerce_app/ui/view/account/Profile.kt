@@ -46,7 +46,7 @@ import androidx.navigation.NavHostController
 import com.example.e_commercompose.R
 import com.example.eccomerce_app.util.General
 import com.example.eccomerce_app.util.General.toCustomFil
-import com.example.core.network.dto.UpdateMyInfoDto
+import com.example.core.data.dto.UpdateMyInfoDto
 import com.example.eccomerce_app.ui.component.TextInputWithTitle
 import com.example.eccomerce_app.ui.component.TextNumberInputWithTitle
 import com.example.eccomerce_app.ui.component.TextSecureInputWithTitle

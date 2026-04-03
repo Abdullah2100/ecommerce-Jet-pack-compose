@@ -6,9 +6,9 @@ import androidx.lifecycle.viewModelScope
 import com.example.common.model.BannerModel
 import com.example.core.network.NetworkCallHandler
 import com.example.eccomerce_app.model.DtoToModel.toBanner
-import com.example.core.network.Secrets
-import com.example.core.network.dto.BannerDto
-import com.example.core.network.repository.BannerRepository
+import com.example.core.domain.Secrets
+import com.example.core.data.dto.BannerDto
+import com.example.core.data.repository.BannerRepository
 import com.microsoft.signalr.HubConnection
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope

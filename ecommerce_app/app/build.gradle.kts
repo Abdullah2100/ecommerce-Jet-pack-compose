@@ -195,11 +195,9 @@ dependencies {
 
     //modular
     implementation(project(":core"))
-    implementation(project(":common"))
 
     //this for testing
     testImplementation(project(":core"))
-    testImplementation(project(":common"))
 
 }
 

@@ -27,5 +27,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "eccomerce_app"
 include(":app")
-include(":common")
 include(":core")

@@ -9,18 +9,18 @@ import com.example.core.database.Dao.AuthDao
 import com.example.core.database.Model.IsPassLocationScreen
 import com.example.eccomerce_app.model.DtoToModel.toAddress
 import com.example.eccomerce_app.model.DtoToModel.toUser
-import com.example.core.network.dto.UpdateMyInfoDto
-import com.example.core.network.dto.AddressDto
-import com.example.core.network.dto.CreateAddressDto
-import com.example.core.network.dto.UpdateAddressDto
-import com.example.core.network.dto.UserDto
+import com.example.core.data.dto.UpdateMyInfoDto
+import com.example.core.data.dto.AddressDto
+import com.example.core.data.dto.CreateAddressDto
+import com.example.core.data.dto.UpdateAddressDto
+import com.example.core.data.dto.UserDto
 import com.example.core.database.Dao.LocaleDao
 import com.example.core.database.Model.CurrentLocal
 import com.example.core.database.Model.IsPassOnBoardingScreen
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.Secrets
-import com.example.core.network.repository.AddressRepository
-import com.example.core.network.repository.UserRepository
+import com.example.core.domain.Secrets
+import com.example.core.data.repository.AddressRepository
+import com.example.core.domain.repository.IUserRepository
 import com.example.eccomerce_app.util.General.currentLocal
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -30,7 +30,7 @@ import java.util.UUID
 
 class UserViewModel(
     val dao: AuthDao,
-    val userRepository: UserRepository,
+    val userRepository: IUserRepository,
     val addressRepository: AddressRepository,
     val localeDao: LocaleDao
 ) : ViewModel() {

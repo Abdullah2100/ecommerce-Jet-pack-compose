@@ -1,13 +1,12 @@
 package com.example.eccomerce_app.viewModel
 
 import androidx.lifecycle.ViewModel
-import com.example.eccomerce_app.util.General
 import com.example.core.network.NetworkCallHandler
 import com.example.core.database.Dao.CurrencyDao
 import com.example.core.database.Model.Currency
-import com.example.core.network.Secrets
-import com.example.core.network.repository.CurrencyRepository
-import com.example.core.network.dto.CurrencyDto
+import com.example.core.domain.Secrets
+import com.example.core.data.repository.CurrencyRepository
+import com.example.core.data.dto.CurrencyDto
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

@@ -9,12 +9,12 @@ import com.example.common.model.CartModel
 import com.example.eccomerce_app.model.DtoToModel.toOrderItem
 import com.example.common.model.ModelToDto.toOrderRequestItemDto
 import com.example.common.model.Order
-import com.example.core.network.dto.CreateOrderDto
-import com.example.core.network.dto.OrderDto
-import com.example.core.network.dto.OrderItemsStatusEvent
+import com.example.core.data.dto.CreateOrderDto
+import com.example.core.data.dto.OrderDto
+import com.example.core.data.dto.OrderItemsStatusEvent
 import com.example.core.network.NetworkCallHandler
-import com.example.core.network.repository.OrderRepository
-import com.example.core.network.dto.OrderUpdateStatusDto
+import com.example.core.domain.repository.IOrderRepository
+import com.example.core.data.dto.OrderUpdateStatusDto
 import com.microsoft.signalr.HubConnection
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
@@ -27,7 +27,7 @@ import java.util.UUID
 import javax.inject.Named
 
 class OrderViewModel(
-    val orderRepository: OrderRepository,
+    val orderRepository: IOrderRepository,
     @Named("orderHub") val webSocket: HubConnection?,
     val scop: CoroutineScope
 

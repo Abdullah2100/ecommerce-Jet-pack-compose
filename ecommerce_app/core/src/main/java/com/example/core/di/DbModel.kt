@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.example.core.Util
 import com.example.core.database.DataBase
-import com.example.core.network.Secrets
+import com.example.core.domain.Secrets
 import org.koin.dsl.module
 
 fun provideDataBase(application: Context): DataBase {
