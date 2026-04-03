@@ -1,40 +1,43 @@
-# E-commerce Application Documentation
+# E-commerce Ecosystem (Jetpack Compose)
 
-This document provides an overview of the e-commerce full stack project, including its structure and key components.
+This repository contains a e-commerce mobile solution built with modern Android technologies. It consists of two primary applications: a **Customer App** and a **Delivery Man App**, both leveraging **Jetpack Compose** for a modern, reactive UI.
 
-## Project Structure
+## 📱 Project Overview
 
-The project is divided into the following main directories:
-- `eccorce_app`: Contains the Android application for the e-commerce platform.
-- `ecommerce-delivery-man`: Contains the Android application for the delivery man.
+The project is structured to handle the entire lifecycle of an order, from customer purchase to final delivery.
 
-## `eccorce_app` Directory
+### 1. [Customer Application (`ecommerce_app`)](./ecommerce_app)
+The customer-facing app allows users to browse products, manage their cart, and make secure payments.
+- **Key Features**:
+    - **Modular Architecture**: Separate `app` (UI) and `core` (Data/Domain) modules.
+    - **Secure Payments**: Integrated with Stripe SDK.
+    - **Real-time Tracking**: Powered by SignalR for live order updates.
+    - **Location Services**: Google Maps integration for address selection.
+    - **Modern UI**: Built entirely with Jetpack Compose and Material 3.
 
-The `eccorce_app` directory contains the Android application for the e-commerce platform. It follows a standard Android project structure.
+### 2. [Delivery Man Application (`ecommerce-delivery-man`)](./ecommerce-delivery-man)
+The delivery-focused app manages order assignments, navigation, and delivery verification.
+- **Key Features**:
+    - **Real-time Assignments**: Instant notification of new delivery tasks via SignalR.
+    - **Secure Data**: Uses SQLCipher for encrypted Room database storage.
+    - **QR Verification**: Integrated CameraX for scanning delivery verification codes.
+    - **Navigation**: Built-in Google Maps navigation for optimized delivery routes.
+    - **Financials**: "Collect Money" feature for cash-on-delivery orders.
 
-### Technology Stack
+## 🛠 Shared Tech Stack
+- **Languages**: Kotlin
+- **UI Framework**: Jetpack Compose
+- **DI**: Koin
+- **Networking**: Ktor / Retrofit
+- **Local Storage**: Room (with SQLCipher)
+- **Real-time**: SignalR & Firebase Cloud Messaging
+- **Maps**: Google Maps SDK
 
-- Kotlin
+## 🚀 Recent Key Milestones
+- ✅ **Modularization**: Successfully refactored `ecommerce_app` into a multi-module project for better scalability.
+- ✅ **Secure Storage**: Implemented encrypted databases in the delivery app.
+- ✅ **Cash Flow Management**: Added the "Collect Money" feature for delivery personnel handling cash orders.
+- ✅ **UI Refinement**: Optimized layouts and transitions for better performance across different devices.
 
-### Directory Structure
-
-- `app/src/main/java/com/example/eccomerce_app`: Contains the source code for the Android application.
-    - `di`: Contains the dependency injection modules.
-    - `ui`: Contains the user interface components, such as activities, fragments, and adapters.
-    - `dto`: Contains the data transfer objects.
-    - `data`: Contains the data layer, including repositories and data sources.
-    - `util`: Contains utility classes.
-    - `model`: Contains the data models.
-    - `services`: Contains background services.
-    - `viewModel`: Contains the view models.
-    - `MainActivity.kt`: The main activity of the application.
-    - `MyApplication.kt`: The application class.
-    - `MyFirebaseMessagingService.kt`: The Firebase messaging service.
-
-## `ecommerce-delivery-man` Directory
-
-The `ecommerce-delivery-man` directory contains the Android application for delivery personnel. It follows a standard Android project structure, similar to the `eccorce_app`.
-
-### Technology Stack
-
-- Kotlin
+---
+*Developed by Abdullah.*

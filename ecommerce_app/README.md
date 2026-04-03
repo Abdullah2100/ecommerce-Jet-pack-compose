@@ -1,8 +1,34 @@
-# Ecommerce 
+# E-commerce Customer Application
 
-A delivery man application for an e-commerce platform.
+A modern, high-performance Android application for customers built with **Jetpack Compose**. This app provides a seamless shopping experience with real-time updates and secure payment integration.
 
-## Images
+## 🚀 Recent Updates
+- **Modular Architecture**: Refactored the project into a modular structure (`app` and `core`) to improve maintainability and build times.
+- **Enhanced Core Module**: Centralized network, database, and repository logic into the `core` module.
+- **UI/UX Polishing**: Refined layouts and removed redundant components for a smoother user experience.
+- **Improved Navigation**: Integrated modern navigation suite for better flow.
+
+## 🏗 Architecture
+The project follows **Clean Architecture** and **MVVM** patterns, divided into:
+- **`:app`**: Contains the UI layer (Compose), ViewModels, and UI-specific utilities.
+- **`:core`**: The engine of the app, containing:
+    - **Data Layer**: Repositories, DTOs, Room Database, and API services.
+    - **Domain Layer**: Business logic and domain models.
+    - **DI**: Dependency injection modules using Koin.
+
+## 🛠 Tech Stack
+- **Language**: Kotlin
+- **UI Framework**: Jetpack Compose
+- **DI Framework**: Koin
+- **Asynchronous**: Kotlin Coroutines & Flow
+- **Local Database**: Room
+- **Payments**: Stripe SDK
+- **Real-time**: SignalR
+- **Maps & Location**: Google Maps SDK & Play Services Location
+- **Images**: Coil
+- **Push Notifications**: Firebase Cloud Messaging (FCM)
+
+## 📸 Screenshots
 
 ![086957f4-13f2-435e-8930-2338deaba78b.png](images/086957f4-13f2-435e-8930-2338deaba78b.png)
 ![0ccf0b98-81cf-44e3-8c41-c9f19906a5ec.png](images/0ccf0b98-81cf-44e3-8c41-c9f19906a5ec.png)
